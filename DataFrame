@@ -1,0 +1,49 @@
+# ------------------DataFrame---------------------
+# A DataFrame is a two-dimensional array of values. Much like an Excel spreadsheet, 
+# It's a way to organize data in rows and columns, making it easy to analyze, manipulate, and visualize.
+
+# ----------------------------
+import pandas as pd
+dataframe={
+    "name":['urba','hello','lop'],
+    "age":[19,20,90],
+    "marks":[23,76,89]
+
+}
+df=pd.DataFrame(dataframe)
+print(df)
+# -----------------------------------METHODS----------------
+
+
+data={
+    "Name":["urba","ghjk","ummy","moon","poiuy","vbnm","werty","xcvbnm"],
+    "Age":[19,49,59,697,89,10,20,70],
+    "Gender":["F","M","F","F","M","f","f","M"]
+}
+
+df=pd.DataFrame(data)
+# head only present the first 5 rows
+print(df.head())
+
+# and tail present only the last 5 rows 
+print(df.tail())
+
+# there are two way to reteieve the data from the column  either  by using square brackets or 
+
+print(df["Name"])
+
+# using the dot notion
+print(df.Name)
+
+# --------to determine the order of your columns put them in a list
+print(df[["Name","Age","Gender"]]) 
+#  # or you can change the placing of the varaibles in the list
+
+print(df[["Age","Gender","Name"]])
+
+# ------or get rows by using slicing 
+
+print(df[2:5])
+
+print(df[:6])
+
